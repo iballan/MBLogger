@@ -6,7 +6,7 @@ Android logger that i use in my projects
 MBLogger logger;
 
 logger = new MBLogger.Builder()
-                .setTag(this) // here u can give objects, or strings
+                .setTag(this) // here u can give object, or string ang logger will get the tag from it
                 .setIsOnlyInDebug(true) // if u want log messages to appear only in debug mode
                 .createLogger();
                 
