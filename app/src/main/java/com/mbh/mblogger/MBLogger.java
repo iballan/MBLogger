@@ -7,14 +7,22 @@ import android.util.Log;
  * Created by MBH on 2016-02-01.
  */
 public class MBLogger {
-    public static String MAIN_TAG = "MB-";
+
     private boolean mIsOnlyInDebug = true;
     private String TAG;
+    private String MainTag = "MB-";
     private boolean IS_DEBUG;
 
     public MBLogger(String tag, boolean onlyOnDebugMode) {
         this.mIsOnlyInDebug = onlyOnDebugMode;
-        TAG = MAIN_TAG+tag;
+        TAG = MainTag+tag;
+        IS_DEBUG = BuildConfig.DEBUG;
+    }
+
+    public MBLogger(String tag, boolean onlyOnDebugMode, String mainTag) {
+        this.mIsOnlyInDebug = onlyOnDebugMode;
+        this.MainTag = mainTag;
+        TAG = MainTag+tag;
         IS_DEBUG = BuildConfig.DEBUG;
     }
 
@@ -117,6 +125,7 @@ public class MBLogger {
     public static class Builder {
         private String tag = "";
         private boolean onlyOnDebugMode = true;
+        private String MainTag = "MB-";
 
         public Builder() {
 
@@ -124,6 +133,11 @@ public class MBLogger {
 
         public Builder setTag(String tag) {
             this.tag = tag;
+            return this;
+        }
+
+        public Builder setMainTag(String mainTag){
+            this.MainTag = mainTag;
             return this;
         }
 
@@ -143,7 +157,7 @@ public class MBLogger {
         }
 
         public MBLogger createLogger() {
-            return new MBLogger(tag, onlyOnDebugMode);
+            return new MBLogger(tag, onlyOnDebugMode, MainTag);
         }
     }
 }
