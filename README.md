@@ -7,6 +7,7 @@ MBLogger logger;
 
 logger = new MBLogger.Builder()
                 .setTag(this)
+                .setIsOnlyInDebug(true) // if u want log messages to appear only in debug mode
                 .createLogger();
                 
                 
