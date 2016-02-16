@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/MBLoggerSample.iml" filepath="$PROJECT_DIR$/MBLoggerSample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MBLogger.iml" filepath="$PROJECT_DIR$/MBLogger.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/mblogger/mblogger.iml" filepath="$PROJECT_DIR$/mblogger/mblogger.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MBlogger/mblogger.iml" filepath="$PROJECT_DIR$/MBlogger/mblogger.iml" />
     </modules>
   </component>
 </project>
