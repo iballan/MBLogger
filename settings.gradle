@@ -1,2 +1,1 @@
-include ':Sample'
-include ':MBLogger' 
+include ':app', ':mblogger'
